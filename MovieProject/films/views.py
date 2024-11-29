@@ -4,4 +4,4 @@ def index(request):
     return render(request, 'films/index.html')
 
 def new(request):
-    return render(request, 'films/index.html')
+    return render(request, 'films/new.html')
