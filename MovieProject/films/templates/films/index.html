@@ -1,14 +1,22 @@
-{% extends 'main/layout.html' %}
+{% extends 'films/layout.html' %}
 
 {% block title %}
-  <title>Первая страница</title>
+  <title>Новостная страница</title>
 {% endblock %}
 
 {% block content %}
-<h1>Космонавтика</h1>
-<h2>Первый космонавт на планете Земля</h2>
-<h3> Юрий Алексеевич Гагарин</h3>
-<p>12 апреля 1961 года, впервые в истории,
- Юрий Гагарин совершил космический полет вокруг земного шара.</p>
+<h1>Фильмы</h1>
+{% if news %}
+    {% for new in news %}
+			<div>
+				<h3> {{ new.title }} </h3>
+				<p> {{ new.short_description }} </p>
+				<p> {{ new.text }} </p>
+			</div>
+    {% endfor %}
+{% else %}
+		<h4>Новых фильмов нет.</h4>
+{% endif %}
+
 
 {% endblock %}
