@@ -15,11 +15,11 @@ def create_news(request):
                  form = News_postForm(request.POST) # Сюда сохранится информация от пользователя.
                  if form.is_valid():
                          form.save
-                         return redirect('news_home')
+                         return redirect('home')
                  else:
                          error # "Данные были заполнены некорректно"
          form = News_postForm()
-         return render(request, 'news/add_new_post.html', {'form': form, 'error': error})
+         return render(request, 'films/add_new_post.html', {'form': form, 'error': error})
 
 
 
