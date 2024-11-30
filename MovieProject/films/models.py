@@ -10,8 +10,8 @@ class News_post(models.Model):
             return self.title
 
         class Meta:
-            verbose_name = 'Новость'
-            verbose_name_plural = 'Новости'
+            verbose_name = 'Фильм'
+            verbose_name_plural = 'Фильмы'
 
 
 

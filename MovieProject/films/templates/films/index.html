@@ -6,12 +6,12 @@
 
 {% block content %}
 <h1>Фильмы</h1>
-    {% if news %}
-            {% for new in news %}
+    {% if films %}
+            {% for film in films %}
 			    <div>
-				    <h3> {{ new.title }} </h3>
-				    <p> {{ new.short_description }} </p>
-				    <p> {{ new.text }} </p>
+				    <h3> {{ film.title }} </h3>
+				    <p> {{ film.short_description }} </p>
+				    <p> {{ film.text }} </p>
 			    </div>
             {% endfor %}
     {% else %}
