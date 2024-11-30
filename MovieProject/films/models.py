@@ -6,12 +6,12 @@ class News_post(models.Model):
         short_description = models.TextField('Описание фильма')
         text = models.TextField('Отзыв')
 
-def __str__(self):
-        return self.title
+        def __str__(self):
+            return self.title
 
-class Meta:
-     verbose_name = 'Фильм'
-     verbose_name_plural = 'Фильмы'
+        class Meta:
+            verbose_name = 'Новость'
+            verbose_name_plural = 'Новости'
 
 
 

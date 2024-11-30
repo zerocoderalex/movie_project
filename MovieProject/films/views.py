@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import News_post
 from .forms import News_postForm
+
 # Create your views here.
 def home(request):
     news = News_post.objects.all()
