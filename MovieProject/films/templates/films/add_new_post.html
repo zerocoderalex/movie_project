@@ -11,13 +11,14 @@
 	    <h2>Форма для добавления новостей</h2>
 	    <form method="post" >
          {% csrf_token %}.
-            <input type="text" name="title" placeholder="Название фильма"> <br>
+
 		    {{ form.title }}
-		    <textarea name="short_description" placeholder="Краткое описание фильма"></textarea> <br>
-             {{ form.short_description }}
-		    <textarea name="text" placeholder="Отзыв"></textarea> <br>
+		    <br>
+			 {{ form.short_description }}
+		    <br>
              {{ form.text }}
 		     <button type="submit">Добавить отзыв</button> <br>
 	     </form>
+		<p>{{error}}</p>
     </div>
 {% endblock %}
