@@ -2,6 +2,7 @@
 
 {% block title %}
 	<title>Страница для добавления новостей</title>
+{{ form }}
 {% endblock %}
 
 {% block content %}
@@ -11,9 +12,10 @@
 	<form method="post" >
          {% csrf_token %}.
         <input type="text" placeholder="Название фильма"> <br>
-		<textarea  placeholder="Краткое описание фильма"></textarea>  <br>
+		<textarea  placeholder="Краткое описание фильма"></textarea> <br>
 		<textarea placeholder="Отзыв"></textarea> <br>
-		<button type="submit">Добавить отзыв</button>
+
+		<button type="submit">Добавить отзыв</button> <br>
 	</form>
 </div>
 {% endblock %}
