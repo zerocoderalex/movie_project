@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from .models import News_post
 # Create your views here.
-def index(request):
+def home(request):
     news = News_post.objects.all()
-    return render(request, 'films/index.html', {'news': news})
+    return render(request, 'films/index.html', {'films': news})
 
+def create_news(request):
+    return render(request, 'films/add_new_post.html')
 
-
-def new(request):
-    return render(request, 'films/new.html')

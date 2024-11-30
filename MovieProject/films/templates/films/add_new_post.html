@@ -1,0 +1,19 @@
+{% extends 'films/layout.html' %}
+
+{% block title %}
+	<title>Страница для добавления новостей</title>
+{% endblock %}
+
+{% block content %}
+<h1>Страница для добавления новостей</h1>
+<div>
+	<h2>Форма для добавления новостей</h2>
+	<form method="post" >
+         {% csrf_token %}.
+        <input type="text" placeholder="Название фильма"> <br>
+		<textarea  placeholder="Краткое описание фильма"></textarea>  <br>
+		<textarea placeholder="Отзыв"></textarea> <br>
+		<button type="submit">Добавить отзыв</button>
+	</form>
+</div>
+{% endblock %}
